@@ -1,82 +1,71 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.linalg import solve_banded
+
+def burgers_tanh_solution(x, t, u_L, u_R, x0, nu):
+    """
+    Analytical solution of the 1D viscous Burgers' equation for
+    a Riemann step initial condition, using the Cole–Hopf transform.
+
+    Parameters
+    ----------
+    x : ndarray
+        Spatial grid points.
+    t : float
+        Time at which to evaluate the solution.
+    u_L : float
+        Left state (x < x0) velocity.
+    u_R : float
+        Right state (x >= x0) velocity.
+    x0 : float
+        Position of the initial step.
+    nu : float
+        Viscosity (kinematic), controls shock thickness.
+
+    Returns
+    -------
+    u : ndarray
+        Velocity profile u(x, t).
+    """
+    if t == 0:
+        # Exact step initial condition
+        return np.where(x < x0, u_L, u_R)
+
+    # Shock center moves at average velocity
+    shock_center = x0 + 0.5 * (u_L + u_R) * t
+
+    # Argument of tanh function from Cole–Hopf solution
+    arg = (u_L - u_R) * (x - shock_center) / (4 * nu)
+
+    # Smooth shock profile
+    u = 0.5 * (u_L + u_R) - 0.5 * (u_L - u_R) * np.tanh(arg)
+    return u
+
 
 # Parameters
+u_L = 1.0
+u_R = 0.0
+x0 = 0.5
 nu = 0.01
-L = 1.0
-nx = 501
-dx = L / (nx - 1)
-x = np.linspace(0, L, nx)
 
-dt = 0.0005
-nt = 700
+# Spatial and temporal grids
+x = np.linspace(0, 1, 500)
+time_values = [0.0, 0.01, 0.03, 0.05, 0.07, 0.10]
 
-# Times we’ll use for plotting later
-plot_indices = [0, int(nt*0.1), int(nt*0.2), int(nt*0.4), int(nt*0.7)]
-plot_labels = [f"t={i*dt:.3f}" for i in plot_indices]
-
-# Initial condition for phi using Cole–Hopf
-phi0 = np.where(x <= 0.5, np.exp(-x/(2*nu)), np.exp(-0.5/(2*nu)))
-
-# Setup storage
-phi = np.zeros((nx, nt+1))
-phi[:, 0] = phi0
-
-# Crank-Nicolson coefficients
-r = nu * dt / dx**2
-
-A_diag = (1 + r) * np.ones(nx-2)
-A_lower = (-0.5*r) * np.ones(nx-3)
-A_upper = (-0.5*r) * np.ones(nx-3)
-
-B_diag = (1 - r) * np.ones(nx-2)
-B_lower = (0.5*r) * np.ones(nx-3)
-B_upper = (0.5*r) * np.ones(nx-3)
-
-# Time-stepping loop
-for n in range(nt):
-    b = B_diag * phi[1:-1, n]
-    b[1:] += B_lower * phi[2:-1, n]
-    b[:-1] += B_upper * phi[0:-3, n]
-
-    # Robin BC at x=0
-    robin_factor = 1 / (1 + dx / (2*nu))
-    b[0] += 0.5 * r * robin_factor * phi[1, n]
-
-    # Solve tridiagonal system
-    ab = np.zeros((3, nx-2))
-    ab[0, 1:] = A_upper
-    ab[1] = A_diag
-    ab[2, :-1] = A_lower
-
-    phi_inner = solve_banded((1, 1), ab, b)
-
-    phi[1:-1, n+1] = phi_inner
-    phi[0, n+1] = robin_factor * phi[1, n+1]
-    phi[-1, n+1] = phi[-2, n+1]  # Neumann BC at x=1
-
-# Recover u from phi
-u = np.zeros_like(phi)
-
-for n in range(nt+1):
-    u[:, n] = -2 * nu * np.gradient(phi[:, n], dx)
-    with np.errstate(divide='ignore', invalid='ignore'):
-        u[:, n] /= phi[:, n]
-        u[phi[:, n] == 0, n] = 0  # Just in case
-
-# Plotting
+# Plot
 plt.figure(figsize=(10, 6))
-plt.plot(x, np.where(x <= 0.5, 1, 0), 'k--', label='Initial $u(x,0)$', linewidth=2)
 
-for idx, lbl in zip(plot_indices[1:], plot_labels[1:]):
-    plt.plot(x, u[:, idx], label=lbl)
+for idx, t in enumerate(time_values):
+    u_profile = burgers_tanh_solution(x, t, u_L, u_R, x0, nu)
+    if t == 0:
+        plt.plot(x, u_profile, '--', color='gray', lw=2, label='t = 0.00 (Initial)')
+    else:
+        plt.plot(x, u_profile, lw=2, label=f't = {t:.2f}')
 
-plt.xlabel('$x$')
-plt.ylabel('$u(x,t)$')
-plt.title("Viscous Burgers’ Equation via Cole–Hopf")
+plt.title("Analytical Viscous Burgers Solution (Cole–Hopf, tanh profile)", fontsize=14)
+plt.xlabel("x", fontsize=12)
+plt.ylabel("u(x, t)", fontsize=12)
+plt.grid(ls=':', alpha=0.7)
 plt.legend()
-plt.grid(True)
-plt.xlim([0, L])
+plt.ylim(-0.1, 1.1)
 plt.tight_layout()
 plt.show()
