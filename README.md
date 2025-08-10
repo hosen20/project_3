@@ -135,10 +135,7 @@ source venv/bin/activate
 #### 4. **Install Dependencies**
 Install the required dependencies listed in the ['requirements.txt'] file:
 
-#### 5. **Download the Dataset**
-Download the 
-Or 
-Directly use a processed data file from the directory.
+
 - ## Usage of the Project
 
 WISER_CFD_2025/
