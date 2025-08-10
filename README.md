@@ -196,7 +196,7 @@ Thank you for the opportunity to participate in this event, which has not only e
 
 ### Project Presentation Deck:
 
-Slide deck and project descriptions linked [here](https://github.com/maham-khalid1/Quantum-AI-for-Climate/tree/main/docs)
+Slide deck and project descriptions linked [here](https://github.com/hosen20/CFD-Womanium-Project/tree/main/Slide-Deck)
 
 
 
