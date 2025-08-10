@@ -142,6 +142,7 @@ Directly use a processed data file from the directory.
 - ## Usage of the Project
 
 WISER_CFD_2025/
+```bash
 │
 ├── README.md                                  # Project overview and documentation
 ├── LICENSE                                    # License for use and distribution
