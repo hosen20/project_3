@@ -48,7 +48,47 @@ By conducting the Burgers’ equation study, the project aims to produce concret
 
 
 ### Methods and objectives
+Burgers’ Equation — Classical, Quantum-Inspired & Quantum Solvers
+This repository implements multiple approaches for solving the 1D viscous Burgers’ equation, enabling benchmarking between analytic, classical numerical, quantum-inspired, and quantum algorithms.
 
+Implemented Methods
+1. Analytic Benchmark — Cole–Hopf Transform
+Exact closed-form travelling viscous shock solution via Cole–Hopf transformation.
+
+Serves as the ground truth for validation.
+
+2. Classical Numerical Solver — Finite-Volume Godunov
+Conservative finite-volume method with Godunov fluxes for shock capturing.
+
+Explicit time-stepping, central differencing for diffusion.
+
+CFL-stable, easy to implement, accurate shock handling.
+
+3. Quantum Tensor Network (QTN) Approaches
+Quantum-Inspired: Classical simulation of QTN evolution using MPS (via quimb).
+
+Quantum Trotterization: MPS circuit encoding + Suzuki/Lie Trotter decomposition.
+
+Scales with number of qubits → grid size = 2ⁿ.
+
+4. HSE + QTN
+Hydrodynamic Schrödinger Equation reformulation of Burgers’ equation.
+
+Compressed MPS representation of wavefunctions & operators for scalable simulation.
+
+5. Hybrid Quantum–Classical Solver
+Amplitude encoding of velocity field.
+
+Split-operator quantum evolution (QFT-based kinetic + nonlinear potential terms).
+
+Classical boundary condition enforcement after each quantum step.
+
+Error Mitigation & Scaling
+Benchmarks on noiseless simulators, noisy backends (FakeManillaV2), and real QPUs.
+
+Error mitigation via Zero Noise Extrapolation (ZNE) and Dynamic Decoupling (DD).
+
+Scaling analysis for qubit count and higher-dimensional generalizations.
 
 ## Results
 
