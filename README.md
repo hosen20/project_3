@@ -141,24 +141,39 @@ Or
 Directly use a processed data file from the directory.
 - ## Usage of the Project
 
-### Uploaded Files
-
-
-- Images - Contains image files related to project.
-- `ModelClassical` - Directory with classical model files.
-- `ModelsQML` - Directory with quantum machine learning model files.
-- `README.md` - This file, providing an overview and instructions for the project.
-- `Requirements.txt` - Contains the list of dependencies required for running the project.
-- `docs` - Directory containing additional documentation and related files.
-
-### Notebooks
-
-- `ModelsQML` - Notebook for training using Quantum algorithms.
-- `ModelClassical` - Notebook for training using classical algorithms.
-
-### Data Files
-
-- `Data` - Contains processed data for training.
+WISER_CFD_2025/
+│
+├── README.md                                  # Project overview and documentation
+├── LICENSE                                    # License for use and distribution
+│
+├── Benchmarking/                              # Scripts and notebooks for performance and accuracy benchmarking
+│   └── Update_Readme.md                       # Notes and documentation for benchmark results
+│
+├── Classical_solution/                        # Classical solver implementations (Cole–Hopf, Godunov)
+│   └── Update_readme.md                       # Documentation for classical solvers
+│
+├── HSE+QTN/                                   # Hybrid Hydrodynamic Schrödinger Equation + Quantum Tensor Network method
+│   └── Update_Readme.md                       # Documentation and usage notes
+│
+├── HSE/                                       # Pure Hydrodynamic Schrödinger Equation solver implementation
+│   └── Add_files_via_upload                   # Latest code and data files
+│
+├── Hardware-QPU/                              # Runs on real quantum processing units
+│   └── Add_files_via_upload                   # QPU execution scripts and outputs
+│
+├── Plot-Images/                               # Generated plots for results visualization
+│   └── Update_readme.md                       # Plot descriptions and references
+│
+├── QTN/                                       # Quantum Tensor Network solver implementation
+│   └── Added_real_QPU_solution                # QTN runs adapted for quantum hardware
+│
+├── Slide-Deck/                                # Presentation slides for project summary
+│   └── Update_readme.md                       # Slide deck documentation
+│
+├── Technical-Report/                          # Detailed writeup of methods, results, and analysis
+│   └── Update_readme.md                       # Report notes and links
+│
+├── requirements.txt                           # Python dependencies for running the project
 
 
 
