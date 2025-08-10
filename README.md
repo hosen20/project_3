@@ -92,6 +92,11 @@ Scaling analysis for qubit count and higher-dimensional generalizations.
 
 ## Results
 
+<img width="467" height="408" alt="Hybrid Quantum-Classical Burgers' Equation Solver" src="https://github.com/user-attachments/assets/540d26b0-b113-4d9c-92eb-1b353a2dbcfe" />
+<img width="720" height="427" alt="Quantum_inspired_solution" src="https://github.com/user-attachments/assets/9699460c-339b-440a-9381-472d677d266f" />
+<img width="607" height="390" alt="HSEHybrid" src="https://github.com/user-attachments/assets/f1571b82-5abb-4c2c-b545-a4d238e2bfa5" />
+
+
 
 
 
