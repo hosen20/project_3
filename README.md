@@ -108,9 +108,9 @@ Directly use a processed data file from the directory.
 ## Team Introduction
 **Team Name:** Q-M.A.R.S
 
-|   **Member Names**| **Abdullah Kazi**                      | **Maham Khalid** | **Rishikesh Gokhale** |   **Sara latreche** |
-|----------------|-----------------------------------|----------------------------|----------------------------|----------------------------|
-| **GitHub ID**  | AbdullahKazi500                   | maham-khalid1      | rishihg      |   Latrechesara|
+|   **Member Names**| **Abdullah Kazi**                      | **Tania Jamshaid** | **Hussein Shiri** | 
+|----------------|-----------------------------------|----------------------------|----------------------------|
+| **GitHub ID**  | AbdullahKazi500                   | Tania Jamshaid      | Hosen20 |
 
 
 
