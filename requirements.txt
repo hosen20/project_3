@@ -3,3 +3,4 @@ qiskit-aer==0.17.1
 qiskit-ibm-runtime==0.41.0
 iqm-benchmarks==2.43
 iqm-client==29.12.0
+quimb==1.11.2
