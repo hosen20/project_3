@@ -134,6 +134,10 @@ source venv/bin/activate
 ```
 #### 4. **Install Dependencies**
 Install the required dependencies listed in the ['requirements.txt'] file:
+```
+pip install -r requirements.txt
+```
+For the QTN notebooks, other packages and python versions are needed. The python version and the required packages versions to install are stated in every notebook. These require a separate environment.
 
 
 - ## Usage of the Project
