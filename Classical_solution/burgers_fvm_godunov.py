@@ -187,7 +187,7 @@ for i, u_snap in enumerate(snapshots):
 
 plt.xlabel('x')
 plt.ylabel('u(x,t)')
-plt.title('Burgers Equation — Evolution Over Time (Including Initial Condition)')
+plt.title('Burgers Equation — Evolution Over Time (FVM-Godunov)')
 plt.grid(True)
 plt.legend()
 plt.tight_layout()
