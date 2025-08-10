@@ -176,10 +176,10 @@ WISER_CFD_2025/
 │
 ├── requirements.txt                           # Python dependencies for running the project
 
-
+```
 
 ## Team Introduction
-**Team Name:** Q-M.A.R.S
+**Team Name:** Feyn man Prodigies 
 
 |   **Member Names**| **Abdullah Kazi**                      | **Tania Jamshaid** | **Hussein Shiri** | 
 |----------------|-----------------------------------|----------------------------|----------------------------|
