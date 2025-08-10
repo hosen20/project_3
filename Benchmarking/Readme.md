@@ -1,6 +1,9 @@
 Benchmarking – Content
 This folder contains datasets and quantum circuit definitions used for benchmarking quantum-inspired algorithms and Trotterized quantum simulations.
 
+Hybrid Quantum–Classical & Quantum-Inspired Benchmarking
+This directory contains Jupyter notebooks for benchmarking hybrid quantum–classical algorithms, quantum tensor network methods, and quantum-inspired simulations.
+
 📂 Files Overview
 1. analytical.npz
 Type: NumPy compressed archive
