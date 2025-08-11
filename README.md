@@ -196,13 +196,21 @@ WISER_CFD_2025/
 │
 ├── Plot-Images/                               # Generated plots for results visualization
 │   └── readme.md                              # Plot descriptions and references
-│
+│   └── HSEHybrid.png
+|   └── HSEQTNNNN.png
+|   └── Hybrid Quantum-Classical Burgers' Equation Solver.png
+|   └── Quantum_inspired_solution.png
+|   └── analytical.png
+|   └── numerical.png
+|   └── psi1.png
+|
 ├── QTN/                                       # Quantum Tensor Network solver implementation
 │   └── readme.md                              # QTN runs adapted for quantum hardware
 │   └── 1_Quantum_inspired_solution_cleaned.ipynb
 |   └── IQMRun_clean.ipynb
 |   └── QTN+trotterization_noisy_clean.ipynb
 |   └── Trotterization_solution_cleaned.ipynb
+|   └── content
 |
 ├── Slide-Deck/                                # Presentation slides for project summary
 │   └── readme.md                              # Slide deck documentation
