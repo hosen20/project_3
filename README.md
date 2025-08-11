@@ -193,7 +193,10 @@ WISER_CFD_2025/
 |
 ├── Hardware-QPU/                              # Runs on real quantum processing units
 │   └── readme.md                              # QPU execution scripts and outputs
-│
+│   └── HSEtrotter_IQM_Garnet_Real_QPU.ipynb
+|   └── Hybrid Quantum-Classical Burgers' Equation Solver_IQM_Garnet
+|   └── IQM_QTN_QPU.ipynb
+|
 ├── Plot-Images/                               # Generated plots for results visualization
 │   └── readme.md                              # Plot descriptions and references
 │   └── HSEHybrid.png
