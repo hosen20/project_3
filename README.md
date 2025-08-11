@@ -184,7 +184,7 @@ WISER_CFD_2025/
 
 |   **Member Names**| **Abdullah Kazi**                      | **Tania Jamshaid** | **Hussein Shiri** | 
 |----------------|-----------------------------------|----------------------------|----------------------------|
-| **GitHub ID**  | AbdullahKazi500                   | Tania Jamshaid      | Hosen20 |
+| **GitHub ID**  | AbdullahKazi500                   | tanisamor      | Hosen20 |
 
 
 
