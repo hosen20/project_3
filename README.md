@@ -176,7 +176,11 @@ WISER_CFD_2025/
 |
 ├── Classical_solution/                        # Classical solver implementations (Cole–Hopf, Godunov)
 │   └── readme.md                              # Documentation for classical solvers
-│
+│   └── Analytical_Cole-Hopf transformation.tex
+|   └── Cole_Hopf_transformation.py
+|   └── burgers_fvm_godunov.py
+|   └── burgers_fvm_godunov.tex
+|
 ├── HSE+QTN/                                   # Hybrid Hydrodynamic Schrödinger Equation + Quantum Tensor Network method
 │   └── readme.md                              # Documentation and usage notes
 │
