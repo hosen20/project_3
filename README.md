@@ -199,14 +199,18 @@ WISER_CFD_2025/
 │
 ├── QTN/                                       # Quantum Tensor Network solver implementation
 │   └── readme.md                              # QTN runs adapted for quantum hardware
-│
+│   └── 1_Quantum_inspired_solution_cleaned.ipynb
+|   └── IQMRun_clean.ipynb
+|   └── QTN+trotterization_noisy_clean.ipynb
+|   └── Trotterization_solution_cleaned.ipynb
+|
 ├── Slide-Deck/                                # Presentation slides for project summary
 │   └── readme.md                              # Slide deck documentation
 │
 ├── Technical-Report/                          # Detailed writeup of methods, results, and analysis
 │   └── readme.md                              # Report notes and links
-│   └── Technical_report
-|   └── Main_report
+│   └── Technical_report.pdf
+|   └── Main_report.pdf
 ├── requirements.txt                           # Python dependencies for running the project
 
 ```
