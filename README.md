@@ -170,7 +170,10 @@ WISER_CFD_2025/
 │
 ├── Benchmarking/                              # Scripts and notebooks for performance and accuracy benchmarking
 │   └── readme.md                              # Notes and documentation for benchmark results
-│
+│   └── Hybrid_Quantum_Classical_Burgers_Equation_Solver_Noisy_Simulator_Benchmarking.ipynb
+|   └── QTN_benchmarking.ipynb
+|   └── Quantum_inspired_HSE_benchmarking.ipynb
+|
 ├── Classical_solution/                        # Classical solver implementations (Cole–Hopf, Godunov)
 │   └── readme.md                              # Documentation for classical solvers
 │
