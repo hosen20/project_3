@@ -183,10 +183,14 @@ WISER_CFD_2025/
 |
 ├── HSE+QTN/                                   # Hybrid Hydrodynamic Schrödinger Equation + Quantum Tensor Network method
 │   └── readme.md                              # Documentation and usage notes
-│
+│   └── HSE+QTN.py
+|   └── HSE+QTN_.ipynb
+|
 ├── HSE/                                       # Pure Hydrodynamic Schrödinger Equation solver implementation
 │   └── readme.md                              # Latest code and data files
-│
+│   └── HSEtrotter.ipynb
+|   └── Hybrid_Quantum_Classical_Burgers'_Equation.ipynb
+|
 ├── Hardware-QPU/                              # Runs on real quantum processing units
 │   └── readme.md                              # QPU execution scripts and outputs
 │
