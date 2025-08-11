@@ -99,14 +99,14 @@ Scaling analysis for qubit count and higher-dimensional generalizations.
       Hybrid Quantum-Classical Burgers' Equation Solver
     </figcaption>
   </figure>
-  
+
   <figure style="display: inline-block; margin: 10px; border: 2px solid #444; border-radius: 8px; padding: 5px;">
     <img src="https://github.com/user-attachments/assets/9699460c-339b-440a-9381-472d677d266f" width="300" alt="Quantum Inspired Solution" />
     <figcaption style="text-align: center; font-size: 0.9em; margin-top: 4px;">
       Quantum Inspired Solution
     </figcaption>
   </figure>
-  
+
   <figure style="display: inline-block; margin: 10px; border: 2px solid #444; border-radius: 8px; padding: 5px;">
     <img src="https://github.com/user-attachments/assets/f1571b82-5abb-4c2c-b545-a4d238e2bfa5" width="300" alt="HSE Hybrid" />
     <figcaption style="text-align: center; font-size: 0.9em; margin-top: 4px;">
